@@ -1,0 +1,42 @@
+### 20 08 12 Class Inheritance and Introduction to Lists
+
+### Set Up 
+- Create a new console project
+    - run dotnet new console -o lecture
+    - adding -o projectName to the new console command created a directory for your project
+    - change the "Hello World" console output to today's assignment title
+    - run dotnet run in the terminal from the created directory for a sanity check
+### Code Together
+- Create a `DnDCharacter` class (in a new c# file)
+    - PROPERTIES :
+    - name : protected string
+    - strength : protected integer
+    - intelligence : protected integer
+    - hp : protected integer
+    - inventory : protected list
+    - METHODS :
+    - formatted output of properties name, strength, intelligence, and hp in the console
+    - output the message "NAME has attacked!"
+    - add items to the inventory
+    - remove items from the inventory by value
+    - remove items from the inventory by index position
+- Create a `Wizard` class (in a new c# file) that extends the DnDCharacter class
+    - PROPERTIES :
+    - inherent all properties from the base class using `:base()` in the class constructor
+    - magic : public string
+    - METHODS :
+    - output the message "NAME has MAGIC magical ability"
+    - output the message "NAME has cast a spell!"
+    - overwrite the base class's attack method to call the method above
+    - add a magical item to the inventory
+- Create a `Fighter` class (in a new c# file) that extends the DnDCharacter class
+    - PROPERTIES :
+    - inherent all properties from the base class using `:base()` in the class constructor
+    - METHODS :
+    - output the message "NAME has slashed sword"
+    - overwrite the base class's attack method to call the method above
+    - add a weapon to the inventory
+- Create a character from the base DnDCharacter class in the Program file
+- Create a wizard character from the Wizard class
+- Create a fighter character from the Fighter class
+- Call all appropriate methods on instances of each class
